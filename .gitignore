@@ -1,0 +1,5 @@
+temp/*
+data/*.exe
+data/*.DAT
+tiles/*.png
+node_modules/*

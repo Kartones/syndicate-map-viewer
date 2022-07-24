@@ -1,0 +1,12 @@
+{
+  "name": "syndicate-map-viewer",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Kartones",
+  "license": "Unlicense",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "jimp": "^0.16.1"
+  }
+}
