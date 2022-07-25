@@ -1,7 +1,4 @@
 import assert from "assert";
-import Jimp from "jimp";
-import { join } from "path";
-import { exit } from "process";
 
 import { Pixel } from "./pixel.js";
 import {
@@ -11,8 +8,7 @@ import {
   SUBTILE_HEIGHT,
   BYTES_PER_ROW,
   BYTES_PER_SUBTILE,
-  TILES_OUTPUT_FOLDER,
-} from "./constants.js";
+} from "../constants.js";
 
 /*
 A subtile is 32x16 pixels
@@ -68,39 +64,6 @@ export const readSubtile = (subtileNumber, offsetArray, contentsArray) => {
   }
 
   return readSubtilePixels(subtileByteContents);
-};
-
-/*
-  Simulate transparent color with pink, other colors as red tones
-*/
-export const saveSubtile = (subtilePixels, subtileNumber) => {
-  const image = new Jimp(
-    SUBTILE_WIDTH,
-    SUBTILE_HEIGHT,
-    "#FF00FF",
-    (err, image) => {
-      if (err) {
-        console.log(err);
-        exit(1);
-      }
-
-      let x = 0;
-      let y = 0;
-      subtilePixels.forEach((pixel) => {
-        if (!pixel.transparent) {
-          const colorHack = ((16 * pixel.color) << 23) + 255;
-          image.setPixelColor(colorHack, x, y);
-        }
-        x++;
-        if (x === SUBTILE_WIDTH) {
-          x = 0;
-          y++;
-        }
-      });
-
-      image.write(join(TILES_OUTPUT_FOLDER, `subtile${subtileNumber}.png`));
-    }
-  );
 };
 
 const generateEmptySubtilePixels = () => {

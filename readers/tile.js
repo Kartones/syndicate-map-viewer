@@ -9,7 +9,9 @@ import {
   SUBTILE_WIDTH,
   SUBTILE_HEIGHT,
   TILES_OUTPUT_FOLDER,
-} from "./constants.js";
+  TILE_WIDTH,
+  TILE_HEIGHT,
+} from "../constants.js";
 
 import { readSubtile } from "./subtile.js";
 
@@ -24,7 +26,7 @@ export const readTile = (tileNumber, offsetArray, contentsArray) => {
 
   const firstSubtileOffset = tileNumber * NUM_SUBTILES_PER_TILE;
 
-  const subtiles = new Array(6);
+  const subtiles = new Array(NUM_SUBTILES_PER_TILE);
   for (let offset = 0; offset < NUM_SUBTILES_PER_TILE; offset++) {
     const subtileNumber = firstSubtileOffset + offset;
     subtiles[offset] = readSubtile(subtileNumber, offsetArray, contentsArray);
@@ -33,16 +35,10 @@ export const readTile = (tileNumber, offsetArray, contentsArray) => {
   return joinSubtiles(subtiles);
 };
 
-/*
-  Simulate transparent color with pink, other colors as red tones
-*/
 export const saveTile = (filenameSuffix, tilePixels, palette) => {
-  const width = SUBTILE_WIDTH * 2;
-  const heigth = SUBTILE_HEIGHT * 3;
-
-  const image = new Jimp(width, heigth, 0x00000000, (err, image) => {
+  const image = new Jimp(TILE_WIDTH, TILE_HEIGHT, 0x00000000, (err, image) => {
     if (err) {
-      console.log(err);
+      console.error(err);
       exit(1);
     }
 
@@ -53,7 +49,7 @@ export const saveTile = (filenameSuffix, tilePixels, palette) => {
         image.setPixelColor(palette[pixel.color], x, y);
       }
       x++;
-      if (x === width) {
+      if (x === TILE_WIDTH) {
         x = 0;
         y++;
       }
@@ -114,7 +110,7 @@ const joinSubtiles = (subtiles) => {
     let y = yOffset * SUBTILE_HEIGHT;
 
     subtilePixels.forEach((pixel) => {
-      tilePixels[y * (SUBTILE_WIDTH * 2) + x] = pixel;
+      tilePixels[y * TILE_WIDTH + x] = pixel;
 
       if (++x === xStartingOffset + SUBTILE_WIDTH) {
         x = xStartingOffset;

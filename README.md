@@ -20,7 +20,6 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
   - HPAL03.DAT
   - HPAL04.DAT
   - HPAL05.DAT
-  - HPALETTE.DAT
 
 ### Decompressing files
 
@@ -32,13 +31,19 @@ Note: overrides the original with the uncompressed version. Game will work witho
 
 ## Usage
 
-### tile-reader.js
+### tile-exporter.js
 
-This tool extracts all tiles from `HBLK01.DAT` file (put it into `data` folder and de-RNC it) into `png` files under the `tiles` subfolder.
+This tool extracts all tiles from `HBLK01.DAT` file (put it into `data` folder and de-RNC it) into `png` files under the `tiles` subfolder. It extracts one version of each tile per palette.
 
-![Tile Reader dumped tles](doc/tile-reader-screenshot.png)
+![Sample Tile Reader tiles](doc/tile-reader-screenshot.png)
+
+### map-exporter.js
+
+**WIP**
+
+This tool exports a `MAPxx.DAT` map file into a `png` file under the `maps` subfolder. 
 
 
 ## References
 
-This project would have never been possible without the incredible [FreeSynd file formats documentation](https://freesynd.sourceforge.io/ff.php).
+This project would have never been possible without the incredible [FreeSynd file formats documentation](https://freesynd.sourceforge.io/ff.php), but beware as some things are outdated or incorrect (some bit orderings, subtile dispositions, etc.).

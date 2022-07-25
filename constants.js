@@ -9,6 +9,8 @@ export const NUM_SUBTILES = NUM_TILES * NUM_SUBTILES_PER_TILE;
 export const OFFSET_ARRAY_LAST_OFFSET = 6144;
 export const SUBTILE_WIDTH = 32;
 export const SUBTILE_HEIGHT = 16;
+export const TILE_WIDTH = SUBTILE_WIDTH * 2;
+export const TILE_HEIGHT = SUBTILE_HEIGHT * 3;
 export const BYTES_PER_ROW = 20;
 export const BYTES_PER_SUBTILE = BYTES_PER_ROW * SUBTILE_HEIGHT;
 
@@ -17,3 +19,4 @@ export const NUM_COLORS_INGAME = 16;
 
 export const DATA_FOLDER = "data";
 export const TILES_OUTPUT_FOLDER = "tiles";
+export const MAP_OUTPUT_FOLDER = "maps";
