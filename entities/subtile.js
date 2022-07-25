@@ -1,6 +1,6 @@
 import assert from "assert";
 
-import { Pixel } from "./pixel.js";
+import { Pixel } from "../entities/pixel.js";
 import {
   NUM_SUBTILES,
   OFFSET_ARRAY_LAST_OFFSET,

@@ -8,7 +8,7 @@ import {
   OFFSET_ARRAY_LAST_OFFSET,
   DATA_FOLDER,
 } from "../constants.js";
-import { readTile } from "../readers/tile.js";
+import { readTile } from "../entities/tile.js";
 
 export const readTiles = () => {
   const contentsArray = readTilesFile();

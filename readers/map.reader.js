@@ -2,7 +2,7 @@ import { join } from "path";
 import { readFileSync } from "fs";
 
 import { DATA_FOLDER } from "../constants.js";
-import { Map } from "./map.js";
+import { Map } from "../entities/map.js";
 
 const readMapFile = (filename) => {
   const filePath = join(DATA_FOLDER, `${filename.toUpperCase()}.DAT`);

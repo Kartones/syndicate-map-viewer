@@ -20,6 +20,9 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
   - HPAL03.DAT
   - HPAL04.DAT
   - HPAL05.DAT
+  - MAP01.DAT
+  - MAP02.DAT
+  - MAP03.DAT
 
 ### Decompressing files
 
@@ -41,9 +44,13 @@ This tool extracts all tiles from `HBLK01.DAT` file (put it into `data` folder a
 
 **WIP**
 
-This tool exports a `MAPxx.DAT` map file into a `png` file under the `maps` subfolder. 
+This tool exports a `MAPxx.DAT` map file into a `png` file under the `maps` subfolder.
+
+![MAP03 with HPAL01](doc/map-only-tiles-01.jpg)
+![MAP03 with HPAL02](doc/map-only-tiles-02.jpg)
 
 
 ## References
 
-This project would have never been possible without the incredible [FreeSynd file formats documentation](https://freesynd.sourceforge.io/ff.php), but beware as some things are outdated or incorrect (some bit orderings, subtile dispositions, etc.).
+- This project would have never been possible without my initial inspiration, the great [FreeSynd file formats documentation](https://freesynd.sourceforge.io/ff.php), although some documentation is either outdated or incorrect.
+- The [libsyndicate project](https://icculus.org/libsyndicate/) contains so many reverse engineered file formats that it is an invaluable source.

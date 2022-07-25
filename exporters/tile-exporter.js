@@ -1,4 +1,4 @@
-import { saveTile } from "../readers/tile.js";
+import { saveTile } from "../entities/tile.js";
 import { readTiles } from "../readers/tile-reader.js";
 import { readPalette } from "../readers/palette-reader.js";
 
