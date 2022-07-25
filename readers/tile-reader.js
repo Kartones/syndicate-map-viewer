@@ -3,12 +3,14 @@ import { join } from "path";
 import { readFileSync } from "fs";
 
 import {
+  NUM_TILES,
   NUM_SUBTILES,
   OFFSET_ARRAY_LAST_OFFSET,
   DATA_FOLDER,
 } from "./constants.js";
 
 import { readTile, saveTile } from "./tile.js";
+import { readPalette } from "./palette-reader.js";
 
 const readTilesFile = () => {
   const filePath = join(DATA_FOLDER, "HBLK01.DAT");
@@ -60,10 +62,14 @@ const readOffsetArray = (fileContentsArray) => {
 const contentsArray = readTilesFile();
 const offsetArray = readOffsetArray(contentsArray);
 
-// for (let i = 0; i < NUM_TILES; i++) {
-//   const subtiles = readTile(i, offsetArray, contentsArray);
-//   saveTile(i, subtiles);
-// }
+const palettes = ["HPAL01", "HPAL02", "HPAL03", "HPAL04", "HPAL05"].map(
+  (filename) => readPalette(filename)
+);
 
-const tile = readTile(21, offsetArray, contentsArray);
-saveTile(21, tile);
+for (let tileNum = 0; tileNum < NUM_TILES; tileNum++) {
+  const tile = readTile(tileNum, offsetArray, contentsArray);
+
+  palettes.forEach((palette, index) => {
+    saveTile(`-${tileNum}-${index}`, tile, palette);
+  });
+}

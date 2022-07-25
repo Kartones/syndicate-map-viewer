@@ -1,10 +1,9 @@
-export class Color {
+export class Pixel {
   #color;
   #transparency;
 
   constructor(b0, b1, b2, b3, transparency) {
-    // Color data bits are also reversed
-    this.#color = (b0 << 3) | (b1 << 2) | (b2 << 1) | b3;
+    this.#color = (b3 << 3) | (b2 << 2) | (b1 << 1) | b0;
     this.#transparency = transparency;
   }
 

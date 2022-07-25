@@ -12,5 +12,8 @@ export const SUBTILE_HEIGHT = 16;
 export const BYTES_PER_ROW = 20;
 export const BYTES_PER_SUBTILE = BYTES_PER_ROW * SUBTILE_HEIGHT;
 
+// For now, optimized palettes for in-game use case
+export const NUM_COLORS_INGAME = 16;
+
 export const DATA_FOLDER = "data";
 export const TILES_OUTPUT_FOLDER = "tiles";

@@ -3,7 +3,7 @@ import Jimp from "jimp";
 import { join } from "path";
 import { exit } from "process";
 
-import { Color } from "./color.js";
+import { Pixel } from "./pixel.js";
 import {
   NUM_SUBTILES,
   OFFSET_ARRAY_LAST_OFFSET,
@@ -106,7 +106,7 @@ export const saveSubtile = (subtilePixels, subtileNumber) => {
 const generateEmptySubtilePixels = () => {
   const subtilePixels = new Array(SUBTILE_WIDTH * SUBTILE_HEIGHT);
   for (let i = 0; i < subtilePixels.length; i++) {
-    subtilePixels[i] = new Color(0, 0, 0, 0, 1);
+    subtilePixels[i] = new Pixel(0, 0, 0, 0, 1);
   }
   return subtilePixels;
 };
@@ -152,7 +152,7 @@ const readSubtilePixels = (subtileContents) => {
           ? 1
           : 0;
 
-      const color = new Color(
+      const color = new Pixel(
         colorBit0,
         colorBit1,
         colorBit2,

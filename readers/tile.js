@@ -36,7 +36,7 @@ export const readTile = (tileNumber, offsetArray, contentsArray) => {
 /*
   Simulate transparent color with pink, other colors as red tones
 */
-export const saveTile = (tileNumber, tilePixels) => {
+export const saveTile = (filenameSuffix, tilePixels, palette) => {
   const width = SUBTILE_WIDTH * 2;
   const heigth = SUBTILE_HEIGHT * 3;
 
@@ -50,8 +50,7 @@ export const saveTile = (tileNumber, tilePixels) => {
     let y = 0;
     tilePixels.forEach((pixel) => {
       if (!pixel.transparent) {
-        const colorHack = ((16 * pixel.color) << 23) + 255;
-        image.setPixelColor(colorHack, x, y);
+        image.setPixelColor(palette[pixel.color], x, y);
       }
       x++;
       if (x === width) {
@@ -60,7 +59,7 @@ export const saveTile = (tileNumber, tilePixels) => {
       }
     });
 
-    image.write(join(TILES_OUTPUT_FOLDER, `tile${tileNumber}.png`));
+    image.write(join(TILES_OUTPUT_FOLDER, `tile${filenameSuffix}.png`));
   });
 };
 
