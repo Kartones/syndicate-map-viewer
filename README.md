@@ -13,7 +13,14 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
 - run `yarn install`
 - Install Wine (to run command line tools)
 - From `tools/bullfrog_utils_rnc.zip`, you'll need the file `dernc.exe` to uncompress `.DAT` files.
-- From your game installation, copy the relevant `.DAT` files to this repository's `data` subfolder.
+- From your game installation, copy the relevant `.DAT` files to this repository's `data` subfolder:
+  - HBLK01.DAT
+  - HPAL01.DAT
+  - HPAL02.DAT
+  - HPAL03.DAT
+  - HPAL04.DAT
+  - HPAL05.DAT
+  - HPALETTE.DAT
 
 ### Decompressing files
 
