@@ -52,8 +52,4 @@ export class Map {
   get tilesData() {
     return this.#tilesData;
   }
-
-  toString() {
-    return `[${this.#xSize},${this.#ySize},${this.#zSize}]`;
-  }
 }

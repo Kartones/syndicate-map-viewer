@@ -14,10 +14,4 @@ export class Pixel {
   get transparent() {
     return this.#transparency === 1;
   }
-
-  toString() {
-    return `[${this.#color.toString().padStart(2, "0")} ${
-      this.transparent ? "T" : " "
-    }]`;
-  }
 }

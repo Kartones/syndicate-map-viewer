@@ -6,7 +6,7 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
 
 ## Assumptions
 
-- This repository and the tools have been used only from a Linux system, with the [Good Old Games version](https://www.gog.com/game/syndicate) of Syndicate, which comes with all files in uppercase. Game is run via [DOSBOX](https://www.dosbox.com/).
+- This repository and the tools have been used only from a Linux system, with the [Good Old Games version](https://www.gog.com/game/syndicate) of Syndicate, which comes with all files in uppercase. I run  the game via [DOSBOX](https://www.dosbox.com/), but there's no real need of that to use the tools.
 
 ## Setup
 

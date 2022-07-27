@@ -5,7 +5,7 @@ import { DATA_FOLDER } from "../constants.js";
 import { Map } from "../entities/map.js";
 
 const readMapFile = (filename) => {
-  const filePath = join(DATA_FOLDER, `${filename.toUpperCase()}.DAT`);
+  const filePath = join(DATA_FOLDER, filename);
 
   const fileContentsBuffer = readFileSync(filePath, null);
   const fileContentsArray = new Uint8Array(

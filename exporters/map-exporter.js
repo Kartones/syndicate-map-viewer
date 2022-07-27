@@ -1,8 +1,16 @@
-import Jimp from "jimp";
+import { readdirSync } from "fs";
 import { join } from "path";
 import { exit } from "process";
 
-import { TILE_WIDTH, TILE_HEIGHT, MAP_OUTPUT_FOLDER } from "../constants.js";
+import Jimp from "jimp";
+
+import {
+  TILE_WIDTH,
+  MAP_OUTPUT_FOLDER,
+  SUBTILE_HEIGHT,
+  SUBTILE_WIDTH,
+  DATA_FOLDER,
+} from "../constants.js";
 import { readMap } from "../readers/map.reader.js";
 import { readTiles } from "../readers/tile-reader.js";
 import { readPalette } from "../readers/palette-reader.js";
@@ -10,30 +18,29 @@ import { readPalette } from "../readers/palette-reader.js";
 export const exportMap = (fileName, paletteFileName, tiles, palette) => {
   const map = readMap(fileName);
 
-  // TODO: Fix width/height
-  const imageWidth = TILE_WIDTH * map.xSize;
-  const imageHeigth = TILE_HEIGHT * (map.zSize + map.zSize / 8);
+  // As map is rotated due to the isometric projection so [0,0] beings not in the upper-left corner but way to the right
+  // Each time we advance a tile in Z, is a subtile's worth of pixels and [0,<max-z>] will be the leftmost image tile
+  const baseXOffset = map.zSize * SUBTILE_WIDTH;
+
+  const imageWidth = SUBTILE_WIDTH * map.xSize + baseXOffset;
+  const imageHeigth =
+    SUBTILE_HEIGHT * 2 * map.zSize + SUBTILE_HEIGHT * 3 * map.ySize;
 
   /*
-  TODO: Document isometric tile drawing offset.
-
-  For calculating offsets, /2 horizontal and /3 vertical because a tile is 2x3 tiles
-*/
+  Tiles are nicely designed to be 2x2 regarding positioning, but the extra 1x2 level is for stacking (as a column)
+  */
   const drawTile = (image, tileNum, xOffset, yOffset, zOffset) => {
-    // TODO: Fix alignment
-    // align center horizontally because of the isometric projection
-    const xStartingOffset =
-      ((xOffset - zOffset) * TILE_WIDTH) / 2 +
-      (imageWidth / 2 - imageWidth / 8);
-
-    const yStartingOffset = ((xOffset + zOffset) * TILE_HEIGHT) / 3;
+    // x position is displaced to the right, and each tile advances SUBTILE_WIDTH pixels right
+    const xStartingOffset = (xOffset - zOffset) * SUBTILE_WIDTH + baseXOffset;
+    // y position is displaced to the right, and each tile advances SUBTILE_HEIGHT pixels down
+    const yStartingOffset = (xOffset + zOffset) * SUBTILE_HEIGHT;
 
     // [x,y] for writing in the image
     let x = xStartingOffset;
     let y = yStartingOffset;
 
     // "altitude"/stacking
-    y -= yOffset * (TILE_HEIGHT / 3);
+    y -= yOffset * SUBTILE_HEIGHT;
 
     tiles[tileNum].forEach((pixel) => {
       if (!pixel.transparent) {
@@ -70,14 +77,26 @@ export const exportMap = (fileName, paletteFileName, tiles, palette) => {
   });
 };
 
-// Only need to read once
-const palette1 = readPalette("HPAL01");
-const palette2 = readPalette("HPAL02");
+// ----------------------------
+
+let palettes = [];
+let mapNames = [];
+
 const tiles = readTiles();
 
-exportMap("MAP01", "HPAL01", tiles, palette1);
-exportMap("MAP01", "HPAL02", tiles, palette2);
-exportMap("MAP02", "HPAL01", tiles, palette1);
-exportMap("MAP02", "HPAL02", tiles, palette2);
-exportMap("MAP03", "HPAL01", tiles, palette1);
-exportMap("MAP03", "HPAL02", tiles, palette2);
+readdirSync(DATA_FOLDER)
+  .filter((fileName) => fileName.endsWith(".DAT"))
+  .forEach((fileName) => {
+    if (fileName.startsWith("HPAL")) {
+      palettes.push(readPalette(fileName));
+    }
+    if (fileName.startsWith("MAP")) {
+      mapNames.push(fileName);
+    }
+  });
+
+mapNames.forEach((mapName) =>
+  palettes.forEach((palette, paletteIndex) => {
+    exportMap(mapName, `HPAL0${paletteIndex + 1}`, tiles, palette);
+  })
+);

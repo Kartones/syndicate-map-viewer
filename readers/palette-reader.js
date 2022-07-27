@@ -34,7 +34,7 @@ export const readPalette = (filename) => {
   Values for each component are [0, 63]
 */
 const readPaletteFile = (filename) => {
-  const filePath = join(DATA_FOLDER, `${filename.toUpperCase()}.DAT`);
+  const filePath = join(DATA_FOLDER, filename);
 
   const fileContentsBuffer = readFileSync(filePath, null);
   const fileContentsArray = new Uint8Array(
