@@ -72,6 +72,9 @@ export const exportMap = (fileName, paletteFileName, tiles, palette) => {
       `${fileName}-${paletteFileName}.png`
     );
 
+    // remove alpha channel
+    image.colorType(2);
+
     image.write(outputFileName);
     console.log("Map exported: ", outputFileName);
   });

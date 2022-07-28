@@ -7,22 +7,17 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
 ## Assumptions
 
 - This repository and the tools have been used only from a Linux system, with the [Good Old Games version](https://www.gog.com/game/syndicate) of Syndicate, which comes with all files in uppercase. I run  the game via [DOSBOX](https://www.dosbox.com/), but there's no real need of that to use the tools.
+- Readable over optimized code.
 
 ## Setup
 
 - run `yarn install`
 - Install Wine (to run command line tools)
 - From `tools/bullfrog_utils_rnc.zip`, you'll need the file `dernc.exe` to uncompress `.DAT` files.
-- From your game installation, copy the relevant `.DAT` files to this repository's `data` subfolder:
-  - HBLK01.DAT
-  - HPAL01.DAT
-  - HPAL02.DAT
-  - HPAL03.DAT
-  - HPAL04.DAT
-  - HPAL05.DAT
-  - MAP01.DAT
-  - MAP02.DAT
-  - MAP03.DAT
+- From your game installation (`\SYNDICAT\DATA` subfolder inside it), copy the relevant `.DAT` files to this repository's `data` subfolder:
+  - `HBLK01.DAT`
+  - `HPAL01.DAT` to `HPAL05.DAT` (or the amount of palette files you wish to use for maps)
+  - `MAP01.DAT` to `MAP94.DAT` (or the amount of maps you wish to export)
 
 ### Decompressing files
 
