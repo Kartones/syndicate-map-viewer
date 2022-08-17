@@ -49,3 +49,23 @@ This tool exports a `MAPxx.DAT` map file into a `png` file under the `maps` subf
 
 - This project would have never been possible without my initial inspiration, the great [FreeSynd file formats documentation](https://freesynd.sourceforge.io/ff.php), although some documentation is either outdated or incorrect.
 - The [libsyndicate project](https://icculus.org/libsyndicate/) contains so many reverse engineered file formats that it is an invaluable source.
+
+### Sprites Information
+
+An schema I've drawn to understand how sprites entities and files combine:
+
+```
+┌───────────────┐
+│               │
+│  GameXX.DAT   │
+│               │
+└───────┬───────┘                 next frame
+        │                          ┌───────┐
+        │ anim & frame indexes     │       │
+        │                          │       │
+┌───────▼───────┐             ┌────▼───────┴───┐           ┌─────────────────┐       ┌──────────────────┐
+│               │             │                │           │                 │       │                  │
+│  Sprite Anim  ├────────────►│  Sprite Frame  ├──────────►│ Sprite Element  ├───────►  Sprite Element  │
+│               │ frame index │                │  frames   │      TAB        │       │       data       │
+└───────────────┘             └────────────────┘   list    └─────────────────┘       └──────────────────┘
+```
