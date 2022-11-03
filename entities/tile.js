@@ -36,7 +36,7 @@ export const readTile = (tileNumber, offsetArray, contentsArray) => {
 };
 
 export const saveTile = (filenameSuffix, tilePixels, palette) => {
-  const image = new Jimp(TILE_WIDTH, TILE_HEIGHT, 0x00000000, (err, image) => {
+  const _image = new Jimp(TILE_WIDTH, TILE_HEIGHT, 0x00000000, (err, image) => {
     if (err) {
       console.error(err);
       exit(1);
