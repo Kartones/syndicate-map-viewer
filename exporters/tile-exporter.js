@@ -1,11 +1,15 @@
+import { readdirSync } from "fs";
+
+import { DATA_FOLDER } from "../constants.js";
 import { saveTile } from "../entities/tile.js";
 import { readTiles } from "../readers/tile-reader.js";
 import { readPalette } from "../readers/palette-reader.js";
 
-// "HPAL05"
-const paletteFiles = ["HPAL01", "HPAL02", "HPAL03", "HPAL04"];
-
-const palettes = paletteFiles.map((filename) => readPalette(filename));
+let palettes = readdirSync(DATA_FOLDER)
+  .filter(
+    (fileName) => fileName.startsWith("HPAL") && fileName.endsWith(".DAT")
+  )
+  .map((fileName) => readPalette(fileName));
 
 const tiles = readTiles();
 

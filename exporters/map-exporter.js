@@ -53,7 +53,7 @@ export const exportMap = (fileName, paletteFileName, tiles, palette) => {
     });
   };
 
-  const image = new Jimp(imageWidth, imageHeigth, 0x00000000, (err, image) => {
+  const _image = new Jimp(imageWidth, imageHeigth, 0x00000000, (err, image) => {
     if (err) {
       console.error(err);
       exit(1);
@@ -85,8 +85,6 @@ export const exportMap = (fileName, paletteFileName, tiles, palette) => {
 let palettes = [];
 let mapNames = [];
 
-const tiles = readTiles();
-
 readdirSync(DATA_FOLDER)
   .filter((fileName) => fileName.endsWith(".DAT"))
   .forEach((fileName) => {
@@ -98,8 +96,16 @@ readdirSync(DATA_FOLDER)
     }
   });
 
-mapNames.forEach((mapName) =>
-  palettes.forEach((palette, paletteIndex) => {
-    exportMap(mapName, `HPAL0${paletteIndex + 1}`, tiles, palette);
-  })
+const tiles = readTiles();
+
+Promise.all(
+  mapNames.map(
+    (mapName) =>
+      new Promise((resolve) => {
+        palettes.forEach((palette, paletteIndex) => {
+          exportMap(mapName, `HPAL0${paletteIndex + 1}`, tiles, palette);
+        });
+        resolve();
+      })
+  )
 );
