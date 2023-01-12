@@ -25,7 +25,7 @@ Usage is like:
 ```
 wine dernc.exe <filename1> <filename2> ...
 ```
-Note: overrides the original with the uncompressed version. Game will work without problems with the uncompressed version but just so that you're aware. That's why for safety this project uses it's own folder and you must copy data files there.
+Note: overrides the original with the uncompressed version. Game will work without problems with the uncompressed version but just so that you're aware. That's why for safety this project uses its own folder and you must copy data files there.
 
 ## Usage
 
