@@ -24,7 +24,7 @@
     pixelmatch "^4.0.2"
     tinycolor2 "^1.6.0"
 
-"@jimp/custom@^0.22.11":
+"@jimp/custom@^0.22.12":
   version "0.22.12"
   resolved "https://registry.yarnpkg.com/@jimp/custom/-/custom-0.22.12.tgz#236f2a3f016b533c50869ff22ad1ac00dd0c36be"
   integrity sha512-xcmww1O/JFP2MrlGUMd3Q78S3Qu6W3mYTXYuIqFq33EorgYHV/HqymHfXy9GjiCJ7OI+7lWx6nYFOzU7M4rd1Q==
@@ -197,7 +197,7 @@
   dependencies:
     "@jimp/utils" "^0.22.12"
 
-"@jimp/plugins@^0.22.11":
+"@jimp/plugins@^0.22.12":
   version "0.22.12"
   resolved "https://registry.yarnpkg.com/@jimp/plugins/-/plugins-0.22.12.tgz#45a3b96d2d24cec21d4f8b79d1cfcec6fcb2f1d4"
   integrity sha512-yBJ8vQrDkBbTgQZLty9k4+KtUQdRjsIDJSPjuI21YdVeqZxYywifHl4/XWILoTZsjTUASQcGoH0TuC0N7xm3ww==
@@ -240,7 +240,7 @@
   dependencies:
     utif2 "^4.0.1"
 
-"@jimp/types@^0.22.11":
+"@jimp/types@^0.22.12":
   version "0.22.12"
   resolved "https://registry.yarnpkg.com/@jimp/types/-/types-0.22.12.tgz#6f83761ba171cb8cd5998fa66a5cbfb0b22d3d8c"
   integrity sha512-wwKYzRdElE1MBXFREvCto5s699izFHNVvALUv79GXNbsOVqlwlOxlWJ8DuyOGIXoLP4JW/m30YyuTtfUJgMRMA==
@@ -362,14 +362,14 @@ isomorphic-fetch@^3.0.0:
     node-fetch "^2.6.1"
     whatwg-fetch "^3.4.1"
 
-jimp@0.22.11:
-  version "0.22.11"
-  resolved "https://registry.yarnpkg.com/jimp/-/jimp-0.22.11.tgz#69e1f026d9038267ebb29bb483e31aec578504ff"
-  integrity sha512-3jGVU73gF4dlsykriMsdJxSf+3bpWQUMEIJFZ/nL2QR+pOjrEti3feldbn1DXZ4p50lZ22aSXLk6q4NGj7pQoA==
+jimp@0.22.12:
+  version "0.22.12"
+  resolved "https://registry.yarnpkg.com/jimp/-/jimp-0.22.12.tgz#f99d1f3ec0d9d930cb7bd8f5b479859ee3a15694"
+  integrity sha512-R5jZaYDnfkxKJy1dwLpj/7cvyjxiclxU3F4TrI/J4j2rS0niq6YDUMoPn5hs8GDpO+OZGo7Ky057CRtWesyhfg==
   dependencies:
-    "@jimp/custom" "^0.22.11"
-    "@jimp/plugins" "^0.22.11"
-    "@jimp/types" "^0.22.11"
+    "@jimp/custom" "^0.22.12"
+    "@jimp/plugins" "^0.22.12"
+    "@jimp/types" "^0.22.12"
     regenerator-runtime "^0.13.3"
 
 jpeg-js@^0.4.4:
