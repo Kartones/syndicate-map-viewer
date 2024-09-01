@@ -7,6 +7,6 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "jimp": "0.22.11"
+    "jimp": "1.0.4"
   }
 }
