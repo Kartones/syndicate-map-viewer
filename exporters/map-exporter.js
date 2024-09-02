@@ -1,8 +1,7 @@
 import { readdirSync } from "fs";
 import { join } from "path";
-import { exit } from "process";
 
-import Jimp from "jimp";
+import { Jimp } from "jimp";
 
 import {
   TILE_WIDTH,
@@ -15,7 +14,7 @@ import { readMap } from "../readers/map.reader.js";
 import { readTiles } from "../readers/tile-reader.js";
 import { readPalette } from "../readers/palette-reader.js";
 
-export const exportMap = (fileName, paletteFileName, tiles, palette) => {
+export const exportMap = async (fileName, paletteFileName, tiles, palette) => {
   const map = readMap(fileName);
 
   // As map is rotated due to the isometric projection so [0,0] beings not in the upper-left corner but way to the right
@@ -29,7 +28,7 @@ export const exportMap = (fileName, paletteFileName, tiles, palette) => {
   /*
   Tiles are nicely designed to be 2x2 regarding positioning, but the extra 1x2 level is for stacking (as a column)
   */
-  const drawTile = (image, tileNum, xOffset, yOffset, zOffset) => {
+  const drawTile = async (image, tileNum, xOffset, yOffset, zOffset) => {
     // x position is displaced to the right, and each tile advances SUBTILE_WIDTH pixels right
     const xStartingOffset = (xOffset - zOffset) * SUBTILE_WIDTH + baseXOffset;
     // y position is displaced to the right, and each tile advances SUBTILE_HEIGHT pixels down
@@ -53,31 +52,29 @@ export const exportMap = (fileName, paletteFileName, tiles, palette) => {
     });
   };
 
-  const _image = new Jimp(imageWidth, imageHeigth, 0x00000000, (err, image) => {
-    if (err) {
-      console.error(err);
-      exit(1);
-    }
-
-    map.tilesData.forEach((tile, index) => {
-      const x = index % map.xSize;
-      const z = Math.floor(index / map.xSize);
-      tile.forEach((tileNum, yIndex) => {
-        drawTile(image, tileNum, x, yIndex, z);
-      });
-    });
-
-    const outputFileName = join(
-      MAP_OUTPUT_FOLDER,
-      `${fileName}-${paletteFileName}.png`
-    );
-
+  const image = new Jimp({
+    width: imageWidth,
+    height: imageHeigth,
+    color: 0x00000000,
     // remove alpha channel
-    image.colorType(2);
-
-    image.write(outputFileName);
-    console.log("Map exported: ", outputFileName);
+    colorType: 2,
   });
+
+  for (const [index, tile] of map.tilesData.entries()) {
+    const x = index % map.xSize;
+    const z = Math.floor(index / map.xSize);
+    for (const [yIndex, tileNum] of tile.entries()) {
+      await drawTile(image, tileNum, x, yIndex, z);
+    }
+  }
+
+  const outputFileName = join(
+    MAP_OUTPUT_FOLDER,
+    `${fileName}-${paletteFileName}.png`
+  );
+
+  await image.write(outputFileName);
+  console.log("Map exported: ", outputFileName);
 };
 
 // ----------------------------

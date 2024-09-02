@@ -31,11 +31,19 @@ Note: overrides the original with the uncompressed version. Game will work witho
 
 ### tile-exporter.js
 
+```bash
+node exporters/tile-exporter.js
+```
+
 This tool extracts all tiles from `HBLK01.DAT` file (put it into `data` folder and de-RNC it) into `png` files under the `tiles` subfolder. It extracts one version of each tile per palette.
 
 ![Sample Tile Reader tiles](doc/tile-reader-screenshot.png)
 
 ### map-exporter.js
+
+```bash
+node exporters/map-exporter.js
+```
 
 **WIP**
 

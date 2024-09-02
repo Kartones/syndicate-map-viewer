@@ -1,7 +1,6 @@
 import assert from "assert";
-import Jimp from "jimp";
+import { Jimp } from "jimp";
 import { join } from "path";
-import { exit } from "process";
 
 import {
   NUM_TILES,
@@ -35,28 +34,27 @@ export const readTile = (tileNumber, offsetArray, contentsArray) => {
   return joinSubtiles(subtiles);
 };
 
-export const saveTile = (filenameSuffix, tilePixels, palette) => {
-  const _image = new Jimp(TILE_WIDTH, TILE_HEIGHT, 0x00000000, (err, image) => {
-    if (err) {
-      console.error(err);
-      exit(1);
-    }
-
-    let x = 0;
-    let y = 0;
-    tilePixels.forEach((pixel) => {
-      if (!pixel.transparent) {
-        image.setPixelColor(palette[pixel.color], x, y);
-      }
-      x++;
-      if (x === TILE_WIDTH) {
-        x = 0;
-        y++;
-      }
-    });
-
-    image.write(join(TILES_OUTPUT_FOLDER, `tile${filenameSuffix}.png`));
+export const saveTile = async (filenameSuffix, tilePixels, palette) => {
+  const image = new Jimp({
+    width: TILE_WIDTH,
+    height: TILE_HEIGHT,
+    color: 0x00000000,
   });
+
+  let x = 0;
+  let y = 0;
+  tilePixels.forEach((pixel) => {
+    if (!pixel.transparent) {
+      image.setPixelColor(palette[pixel.color], x, y);
+    }
+    x++;
+    if (x === TILE_WIDTH) {
+      x = 0;
+      y++;
+    }
+  });
+
+  await image.write(join(TILES_OUTPUT_FOLDER, `tile${filenameSuffix}.png`));
 };
 
 const joinSubtiles = (subtiles) => {

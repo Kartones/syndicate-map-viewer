@@ -16,10 +16,10 @@ const tiles = readTiles();
 Promise.all(
   tiles.map(
     (tile, tileNum) =>
-      new Promise((resolve) => {
-        palettes.forEach((palette, index) => {
-          saveTile(`-${tileNum}-${index}`, tile, palette);
-        });
+      new Promise(async (resolve) => {
+        for (const [index, palette] of palettes.entries()) {
+          await saveTile(`-${tileNum}-${index}`, tile, palette);
+        }
         resolve();
       })
   )

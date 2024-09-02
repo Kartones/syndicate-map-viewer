@@ -1,5 +1,5 @@
 import assert from "assert";
-import Jimp from "jimp";
+import { rgbaToInt } from "jimp";
 import { join } from "path";
 import { readFileSync } from "fs";
 
@@ -22,7 +22,7 @@ export const readPalette = (filename) => {
     const blue = paletteContents[color * 3 + 2] * 4;
 
     // RGBA hex value
-    palette[color] = Jimp.rgbaToInt(red, green, blue, 255);
+    palette[color] = rgbaToInt(red, green, blue, 255);
   }
 
   return palette;
