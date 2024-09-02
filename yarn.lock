@@ -2,267 +2,275 @@
 # yarn lockfile v1
 
 
-"@jimp/core@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/core/-/core-1.0.4.tgz#19b92f91175a3094b501ec01c507af251c5f65a1"
-  integrity sha512-K+wDZbpdqwO0+GtMVdTEDttFAWA1R70uebcO+TTVliD88Cae1UKFxJOMTbAGFI+PJqvpZWpZn+5S6N5jLbHVXA==
+"@jimp/core@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/core/-/core-1.1.1.tgz#1080455a0fa64f3643264a7939e9f0417d6ae91c"
+  integrity sha512-u0AvrO45cfSeXyTpfj6s3mxDJGA5SlfEMdlvWLWi5aSm14/DRVd60exvt5vGrAHA+FALIEZ6R17341OHHy0tVg==
   dependencies:
-    "@jimp/file-ops" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/file-ops" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     await-to-js "^3.0.0"
     exif-parser "^0.1.12"
     file-type "^16.0.0"
     mime "3"
 
-"@jimp/diff@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/diff/-/diff-1.0.4.tgz#8c957564a2352ab13e003017a1b5afa9f82cb316"
-  integrity sha512-AEsoPrZ4SiY/xFCVFwcTu3qN63gVyktL3NXHnQZoYOLcW9pvFVGsNxBa1iwk0OkK2FAR7VyuOsJtn0qmq6hUNA==
+"@jimp/diff@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/diff/-/diff-1.1.1.tgz#0e441dc70dbd4f53ed69d275879478e648e07350"
+  integrity sha512-nCDeQORAgbII+Qw/9sp7Gzg+w+XOuWsQULd+bTE+UpxL6ikJW+6y4vu2BZLkW8dvhNAEyreAEEZfMziTsQs+Og==
   dependencies:
-    "@jimp/plugin-resize" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/plugin-resize" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     pixelmatch "^5.3.0"
 
-"@jimp/file-ops@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/file-ops/-/file-ops-1.0.4.tgz#587bea73fa7b73f2af3f5d24949f4f4ff02c466f"
-  integrity sha512-Epbp4brdZY6cv4jFmY8TUF6RtpIWnVFAGPr6tOTF/bI8RsXgucNbpjFQZU5M+HOAyxLED6p7o1STHFn6nGMVnA==
+"@jimp/file-ops@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/file-ops/-/file-ops-1.1.1.tgz#2139550862bd444c630c66451ed098015a41ba18"
+  integrity sha512-pnCSe/eX65SaWHi5W2x6oL5WVWWr6RsLpHafkjRUuEUE86eTNHVB/TGN0TRkH65MNzK5VRtBBZKkAhaDCPrVIQ==
 
-"@jimp/js-bmp@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/js-bmp/-/js-bmp-1.0.4.tgz#32c0ecd6567c83a116b3d54f538a5a1df8804d36"
-  integrity sha512-p2l0xBfo+fQ/NBG93DKBC06e5xFAHRP0B4KdUINSoAXULkrBfutKd9KPBRQMAjVA8e3anLEiv1P91wYSScEvLA==
+"@jimp/js-bmp@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/js-bmp/-/js-bmp-1.1.1.tgz#4d0922b5cab4521c077224dce53c8ef2533e1e82"
+  integrity sha512-BCunKEq47b/AzZcqdkqqgjxaHX1qy3hgcNV5jh9asDPxa8RUrcwJCDo1Tk8TnqAqVujeXX2KZ4Ltt+x3yrMYYA==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     bmp-ts "^1.0.9"
 
-"@jimp/js-gif@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/js-gif/-/js-gif-1.0.4.tgz#deabf6286d4caeb0dac272d79535c0b9ac686834"
-  integrity sha512-P/BH5JsR+WwkvpD+OPg+M4As+Cnzigin7QcTjda8A5nQyuTTL86qdrl5a5DbxBTXRnajCwIhb3oAQmbuD9ec/A==
+"@jimp/js-gif@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/js-gif/-/js-gif-1.1.1.tgz#3ce30b97a051d4a7dbc175c9fb6c055042233ac1"
+  integrity sha512-IzhWSJOLIF24aTOwM6SZIusxNsae2NyMWxTW9H/QFlSGBFGu7hIs2iKtP5ieGKuDycfAYq2D9mqhXrX9v2PqJA==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/types" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/types" "1.1.1"
     gifwrap "^0.10.1"
     omggif "^1.0.10"
 
-"@jimp/js-jpeg@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/js-jpeg/-/js-jpeg-1.0.4.tgz#49c51cd98b8623f6c0297d84c58805c70059b9cc"
-  integrity sha512-BgsYW+cujySH13+8Ld5WLIvyv4VatGb1BlqP7zjS84vriX2HcgGNoyYHjnaLn1Qd5yxfU8Atewqxo0DipLlHmQ==
+"@jimp/js-jpeg@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/js-jpeg/-/js-jpeg-1.1.1.tgz#e38fb1c4fbc9baad2e2242599329aea14cb90bf6"
+  integrity sha512-r3YgBlllaITdDOhxiY3PlXcKdocaEuU1iahsY62KdV5I2RdfbU01g9MA1E1SRAJaB3PgYmVnOdWaRBO3aygVUA==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/types" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/types" "1.1.1"
     jpeg-js "^0.4.4"
 
-"@jimp/js-png@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/js-png/-/js-png-1.0.4.tgz#7cdd4a814bd904b8889e775a8ec64fc90f6a9f63"
-  integrity sha512-B8AeNGbPFd/wZzIKy9qZXvJ44yDDSQSDsU0OrCiNZCP70S5raWa93LehOYqEdr+brwO7+FiwI7nbCAUB/zgcPQ==
+"@jimp/js-png@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/js-png/-/js-png-1.1.1.tgz#7cd88a066d3c5e24f45393418e23881425c14e68"
+  integrity sha512-eI9zXphq2wyDk/e+Y6VgJGjncQV4qBFcueLr3a3JGX5aNCzAN4S1oh7vO4oWaRlq1VxbFwpBj6hUAZOW3oL7bw==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/types" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/types" "1.1.1"
     pngjs "^7.0.0"
 
-"@jimp/js-tiff@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/js-tiff/-/js-tiff-1.0.4.tgz#a3308155cd29561cfd23c31b0a9685f738e7433e"
-  integrity sha512-K/A/Ej6C0bgUP7nD0vH3hc2ftfib7oAdRPN1HLpyyJJc4eatfLcoY1BlDgLiOwEfv8LEzhRB8+0uMwM6ZrvjcQ==
+"@jimp/js-tiff@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/js-tiff/-/js-tiff-1.1.1.tgz#f1bc01d450c1680b86e37dd6175321328c0e1f95"
+  integrity sha512-vQiqF2Tt777oLUWd4pGE/u4d8SrtgPk7f92BibFSxArIjqfhgGLX+Yj4lkGJDSNNXy2eFJodSc5amrJsEaFV+w==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/types" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/types" "1.1.1"
     utif2 "^4.1.0"
 
-"@jimp/plugin-blit@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-blit/-/plugin-blit-1.0.4.tgz#cb6713d85fb82607b1c131cd531a842e1d82c209"
-  integrity sha512-u3HIa6VmKShNJ3/RPIJizecEFgRPwLVo0vyjtE/hx7L2TfbNxaWShUBUqEVL192Luk7D9SIBl998ujn37lO4DQ==
+"@jimp/plugin-blit@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-blit/-/plugin-blit-1.1.1.tgz#1963ad0e648094464cb5c2e74b2d7888196178ce"
+  integrity sha512-0TJxk8MMblSy8yoL+mjg1Iejjmfs9XPJPwadijlstvmjAug+/apXjZsu5aOFr7q+XncK5AcqZAHEFImKyIX6Cg==
   dependencies:
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-blur@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-blur/-/plugin-blur-1.0.4.tgz#a61490329b2d278924ab751c1ffdd1750679bfdf"
-  integrity sha512-hgNPUvlgyoRGIYFZ5u2Ptd2f3b1m2+KeDJ1RXnWshz01oc/vr0UyRZRzmhKn0S8Ic+3UYa3mAsIBp7GLsXyK5g==
+"@jimp/plugin-blur@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-blur/-/plugin-blur-1.1.1.tgz#561f81b36f00c7ceed4a6bfe35c41f97d4ecf8cf"
+  integrity sha512-3Cx1ErRv83qOUyhUA97bCCcCFb6wg0f2I7ZJ3c2hM0PiVYzqGmPBhtaKXXBA9/w0d/Msf3VKpgnyXEMPZoR8rA==
   dependencies:
-    "@jimp/types" "1.0.4"
+    "@jimp/types" "1.1.1"
 
-"@jimp/plugin-circle@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-circle/-/plugin-circle-1.0.4.tgz#d82365b8d328be4f721d256d045e834ad153fa35"
-  integrity sha512-C4lBEnCYBahq4qefYyAH/mkIsWzytsERcwR17V6x4+UxmD0vW1aEMAKrPvEEsTM7O84zUgCrYuh7+Uuvf+00lw==
+"@jimp/plugin-circle@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-circle/-/plugin-circle-1.1.1.tgz#cd24757092ef10051790cf75209b382ca4bebf0f"
+  integrity sha512-/DH3p+oPbKDX4Z505p/zuYMnnZXbp45m94ogj4Xo/hnQk6bVJjJotKcMM9DLtRQqVpwtn7yh87FPidjB/SvEYg==
   dependencies:
-    "@jimp/types" "1.0.4"
+    "@jimp/types" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-color@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-color/-/plugin-color-1.0.4.tgz#163113d72b91da08f052c32aa906128bf1bf2f5e"
-  integrity sha512-og/KO6pRncUt2ovQK+J/UseLerfjmv4IBS4Byb5KrQ1O7P5l+wvb537EMuixHOzW9G7CI7OyuzjOSEvW1LOJOQ==
+"@jimp/plugin-color@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-color/-/plugin-color-1.1.1.tgz#283efd5b5a5e0e6f92e70f87bd6fe81f93d4c472"
+  integrity sha512-GvxpDPhtbk/YhIRKR9YDnyne6fiTM6pEEcllzqlDEBuaTYSU6tLBuZXABMSceO+mpCMAtjB72kM4xlyz2jPUWQ==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     tinycolor2 "^1.6.0"
     zod "^3.22.4"
 
-"@jimp/plugin-contain@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-contain/-/plugin-contain-1.0.4.tgz#ba78cabc8667f9a8272d3a6071dad90f348faed7"
-  integrity sha512-5cjPOIW6W/tiVG1CU64rSsR5MJ/x2tGk6Z1erJqI+7oQDtrP9iSI1HGdhrenIegdtgsxQ8xcr3DoaEvmOkwwdA==
+"@jimp/plugin-contain@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-contain/-/plugin-contain-1.1.1.tgz#1b60e5bbf5f01630769c98c71b2ec6143ec36f83"
+  integrity sha512-Eh9Uui6wOuNTGS6F9tN7TCmVE/umDcSyeHBTIwWh8amAW/Us9ZbhVy8cE664BiTy6c/ENjh2KtAvDOFquGaTGA==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/plugin-blit" "1.0.4"
-    "@jimp/plugin-resize" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/plugin-blit" "1.1.1"
+    "@jimp/plugin-resize" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-cover@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-cover/-/plugin-cover-1.0.4.tgz#f2b18b9b83f38635441ca9c696a90ec496c11a9a"
-  integrity sha512-9gYQsSxJ1wvzurS9d0BBVFLb6Y6soc02NL5YA/kdaydfmpUn2M/DbIuVR+G5oaWUvL0kriTyCVLw7Pk26rqxpA==
+"@jimp/plugin-cover@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-cover/-/plugin-cover-1.1.1.tgz#a4262a3200cb0cd4b8e3202ba86c0d41365289e8"
+  integrity sha512-0vJfPa75/VvHWSci5eZ76wXDI0enUTBPipzKqnLnm1nimAFeJsM7cqOpcQzBb2cRtOOI3IQonJc/4x0YDCcpxg==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/plugin-crop" "1.0.4"
-    "@jimp/plugin-resize" "1.0.4"
-    "@jimp/types" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/plugin-crop" "1.1.1"
+    "@jimp/plugin-resize" "1.1.1"
+    "@jimp/types" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-crop@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-crop/-/plugin-crop-1.0.4.tgz#bae91770fb2eb1adef40903f859d2d03302966d9"
-  integrity sha512-FAxSqeeFNvmcEiQ6aHmxGZCtfj+atQAg5Xs8AJMOpVYe36mVLXlaQgl+TDGZl0CroURtVfigtiEVLizAtmF4pQ==
+"@jimp/plugin-crop@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-crop/-/plugin-crop-1.1.1.tgz#d63d25dab5742acd9274278a9dd7cc3b485f7b62"
+  integrity sha512-QHchRlHsVriS8kWNupqvZ/U7uFcOUQSMQj6BqYTKh61s9XHq1oBYe48b7Cbnm9RXHXJj5Ob9QN/9tOKJIaR9nQ==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-displace@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-displace/-/plugin-displace-1.0.4.tgz#40823500e4f156714bf2e07729ca5730e80fb8da"
-  integrity sha512-MXy2E+iwpQV4Iug3+9rYhUCFjJjw/aXn9ShwZSIUKlNuF2NWlZeI2QwbYR0sEFHHbovOMIVuA2FLzgmGM66XfQ==
+"@jimp/plugin-displace@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-displace/-/plugin-displace-1.1.1.tgz#9c9193d5cca909847b79c4b69967d55c6cfdab4b"
+  integrity sha512-gFtftpPVdUIN/T/QD4XLyOXa792ESPlvBk0rqoeOC8iRHttnH/WccRH1dPUvXM2M6h9R/FmZZF2KeA2wB3WN6w==
   dependencies:
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-dither@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-dither/-/plugin-dither-1.0.4.tgz#10f57f168c3a712d59f1998fd907d87102086b06"
-  integrity sha512-MdSmPE1l3sxtGoSVV7WLx5cMLk1KT3x+WXjivL19OBBPTLVbgPYdcOe7ikLM0ZoLbsw6PpvbGNfPY1LxDU7JzA==
+"@jimp/plugin-dither@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-dither/-/plugin-dither-1.1.1.tgz#783b7bd8054cc6b35317e69ef8f673aa3d7c87c4"
+  integrity sha512-/YFasqVlwhnYCQ1m2o1HMzOsyCedleT+WwzQnzQPoqV/OVszXGz/wHuo1LfBpDAnBXDHfcBq4y7ktOgtevzdqQ==
   dependencies:
-    "@jimp/types" "1.0.4"
+    "@jimp/types" "1.1.1"
 
-"@jimp/plugin-fisheye@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-fisheye/-/plugin-fisheye-1.0.4.tgz#292011d8b9665bca306c0eb02b36bd5f092cf4c2"
-  integrity sha512-iSeiU1WzhZBi1qfLWUiMNG7Ft1AP6ZFvfR8fpr9X+ipJ+uvofBQ2SzHUxmhxcI/PGcZTdXUkUxT20LiM9h3ksQ==
+"@jimp/plugin-fisheye@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-fisheye/-/plugin-fisheye-1.1.1.tgz#c2a15b1faf66e589a45efeaaf2b4c5bdd361873c"
+  integrity sha512-xHvO8qAViF9Du0xJRwUi9leQ4Z3OrYO20hOJLMjpYBJDlQFhSyOUIyqwgqcG0bJ9DkTWo1fevhlmyC9SgWlbZQ==
   dependencies:
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-flip@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-flip/-/plugin-flip-1.0.4.tgz#5f7061b4fb68c83d81e24522983858c96005719a"
-  integrity sha512-0YoLAOtvAonHgOST7jyt36Dv0262FQZGbAvevI8TYbcU6BPPSuONBQRw04iSmakk0XdeJ5TfP+I/Z3qZSn48FQ==
+"@jimp/plugin-flip@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-flip/-/plugin-flip-1.1.1.tgz#633f14fce08284f9daa00300a4ccebeea3a37e57"
+  integrity sha512-dNySqualB/fKJ87zxXrd7bzHJUl6utrEPygTPlyUdctVMYjrckYhzfC/12zA3vC14r7Hzkzc2BFBY6RYbjnbCQ==
   dependencies:
-    "@jimp/types" "1.0.4"
+    "@jimp/types" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-hash@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-hash/-/plugin-hash-1.0.4.tgz#e745f11babd915b1c09c3c72c7bcfabe04b7ce8a"
-  integrity sha512-FgL3jX5dIDtVJ5WUVzAcSy740Jk2p/6rB0Vg40TkETfEYnhHfltRGkpvv5a1kxD0icte23eICNU1lL5hw27lJw==
+"@jimp/plugin-hash@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-hash/-/plugin-hash-1.1.1.tgz#194078530927458cfc6f53cdd415103d08dbd940"
+  integrity sha512-Js3mKP3DGX94dGNh+xsgA6wCi9zPt5VY2oy5t03X/F4RonpKLc/aVcKyOK7153iTyLNK1xxQyszboROeWsKwXg==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/js-bmp" "1.0.4"
-    "@jimp/js-jpeg" "1.0.4"
-    "@jimp/js-png" "1.0.4"
-    "@jimp/js-tiff" "1.0.4"
-    "@jimp/plugin-color" "1.0.4"
-    "@jimp/plugin-resize" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
-    "@types/any-base" "^1.1.3"
+    "@jimp/core" "1.1.1"
+    "@jimp/js-bmp" "1.1.1"
+    "@jimp/js-jpeg" "1.1.1"
+    "@jimp/js-png" "1.1.1"
+    "@jimp/js-tiff" "1.1.1"
+    "@jimp/plugin-color" "1.1.1"
+    "@jimp/plugin-resize" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
+    any-base "^1.1.0"
 
-"@jimp/plugin-mask@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-mask/-/plugin-mask-1.0.4.tgz#16d5c49509ff8a18706785d8ffd15ddcfaeb4b68"
-  integrity sha512-E9Z3aitK1coWpCXy0qycBPnfcxTbg3azygdMOZdj9Nbjnf+rh0Jz+JtG4HKJjCw9SLOgvCNjKY71JkubdyoRhg==
+"@jimp/plugin-mask@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-mask/-/plugin-mask-1.1.1.tgz#b2addc68976fc6f7424021a502c657f04cd8123f"
+  integrity sha512-kNVfgjNmt+W/KYA2Mzli0oWX9ad1FivNZBOUNhhSk8xt96pSk88W1BOp9bGsiQU9m8NAkP6tLvw4x+OKOgha1g==
   dependencies:
-    "@jimp/types" "1.0.4"
+    "@jimp/types" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-print@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-print/-/plugin-print-1.0.4.tgz#d7fc377f21e4a8b889b51abd73576b95fe009542"
-  integrity sha512-eTTTfZe7GgIZifLrQgt7EsWK/JKLm2Lm1Upro3wVKHJ8gfBtq5Fu+GxCeER+1bA7a5b9IGZSO3diRNqOpXs6bw==
+"@jimp/plugin-print@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-print/-/plugin-print-1.1.1.tgz#3ba90569edb7a6af9976065f056da5ac96dc6d56"
+  integrity sha512-fTkhBt04bDuFNGUQHwbS7B3b+XGclrjy9vFcW2Zl3llhDzKmbbHfWkCxZf7Ig9K102WO7Gp23w1ri+z89vMBWw==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/js-jpeg" "1.0.4"
-    "@jimp/js-png" "1.0.4"
-    "@jimp/plugin-blit" "1.0.4"
-    "@jimp/types" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/js-jpeg" "1.1.1"
+    "@jimp/js-png" "1.1.1"
+    "@jimp/plugin-blit" "1.1.1"
+    "@jimp/types" "1.1.1"
     parse-bmfont-ascii "^1.0.6"
     parse-bmfont-binary "^1.0.6"
     parse-bmfont-xml "^1.1.6"
     zod "^3.22.4"
 
-"@jimp/plugin-resize@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-resize/-/plugin-resize-1.0.4.tgz#8be6c161b1af877fac7094c72641aa36d1e8a32e"
-  integrity sha512-iOOMCe3rSBKB6AhDBKJFZIjnqL1j6IB/SxdQsW8H5oCevuz4OPROxPBIdNDXxeyGBwqqppXbcnsL+sX7NUI7KQ==
+"@jimp/plugin-quantize@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-quantize/-/plugin-quantize-1.1.1.tgz#a2dc734135849284ef44330fc2833a54e4ad18a0"
+  integrity sha512-0eVO/y0LFTN2t5ouJ/oJpx0Fe2KvMye0jfVNb7SxZb3/cLxjMwF0xLqe/pKRWa4+D6pAlO50j0bXOq7miEPz4Q==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/types" "1.0.4"
+    image-q "^4.0.0"
     zod "^3.22.4"
 
-"@jimp/plugin-rotate@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-rotate/-/plugin-rotate-1.0.4.tgz#41ff4815902e1ce8311b7fdb8d52425afe77a68d"
-  integrity sha512-QjY2DYFZj+m+I6F8aWDGAT/YHfpkP8AF9/qW4zi3Lq3WpBAeOqf9cvcHBjFv3hN72JQlneC5dRWE1h/QfygRxQ==
+"@jimp/plugin-resize@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-resize/-/plugin-resize-1.1.1.tgz#b5a587ef0b817a6f5bdb0721dc75cb0a896f166c"
+  integrity sha512-U2l6JWvQT4uaV7xilutStTEk721iihXzAY7jY7HkHikeM4p70YWPT/YWm9mpeZRaUcrqq5kBBMN+fjxguzjVRg==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/plugin-crop" "1.0.4"
-    "@jimp/plugin-resize" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/types" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/plugin-threshold@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/plugin-threshold/-/plugin-threshold-1.0.4.tgz#de169d585a17ca5091b4f2db1742fa3d95039df9"
-  integrity sha512-wF//3Kg5nOcqBIx7p+fI/8x5T4FDzAXjTL+B8acNJIYNRJR0eceErgFvSl+lAA8xKMyVHbXtrzbUK7+p1Cdptw==
+"@jimp/plugin-rotate@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-rotate/-/plugin-rotate-1.1.1.tgz#f0a3299d524c38dafdca62b916e61fdc21e03b3b"
+  integrity sha512-JxHZKDhXbeYozzs6kgxciv3rakDh8Dv60iVZluxE4c6p838RU5QJt/8hFqQkihyE2sBWVQQS35V+YEDrNtpBLw==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/plugin-color" "1.0.4"
-    "@jimp/plugin-hash" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/plugin-crop" "1.1.1"
+    "@jimp/plugin-resize" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
     zod "^3.22.4"
 
-"@jimp/types@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/types/-/types-1.0.4.tgz#44858f95bd94e5db90a351248766d9bcabba38d8"
-  integrity sha512-sKM5R5kEm2VyfU68vYfEDoDtlmHMZ+pJTvYxa62SA5WEFKeO2ATBsybk5a8bJV1LDL1FXwKgXR6wsO4kx4RfQw==
+"@jimp/plugin-threshold@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/plugin-threshold/-/plugin-threshold-1.1.1.tgz#ac4f379966383c3555710e3634ee4a3da35c7b3d"
+  integrity sha512-nnbmiIWRoj8AjHxramKnacNGaeiDe8sC9JKiobwKTKy3Gkdss6u9ZTBNjLKrhe6EhtJXX8hxO/7J24v87jda7A==
+  dependencies:
+    "@jimp/core" "1.1.1"
+    "@jimp/plugin-color" "1.1.1"
+    "@jimp/plugin-hash" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
+    zod "^3.22.4"
+
+"@jimp/types@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/types/-/types-1.1.1.tgz#875a413e566dcd521035ef0a33037a360c2b910b"
+  integrity sha512-Q2lmbwKQ7tUq6rYqKCeyfvjMOUojg0R273TxzTKzsvSEOuj5QJwDORnNF7O/0t0IXSYXT5ESFhHxmnpAMmwJIw==
   dependencies:
     zod "^3.22.4"
 
-"@jimp/utils@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jimp/utils/-/utils-1.0.4.tgz#09441bc10c2ec036f2704f14b318d0f7b2e45dc1"
-  integrity sha512-aqsJKDleM54v0s9rW+swc0SJHb/O4sy2I56ng+9UC7uhF+P6JRjvMVyqEprQ1fKBaCN/Ff0Bu0YUzEXwUtpH/g==
+"@jimp/utils@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@jimp/utils/-/utils-1.1.1.tgz#d45c3ad75e7329018f2584331e6321b3c2bc1735"
+  integrity sha512-GbVZM2Zug5W884EOMN7vBuMyMBRj5jfi6/EjTzTiF3CFWU8AZvu/HZEJV02ivR8d0dzjNIHb4XQke8t8iVNk+Q==
   dependencies:
-    "@jimp/types" "1.0.4"
+    "@jimp/types" "1.1.1"
     tinycolor2 "^1.6.0"
 
 "@tokenizer/token@^0.3.0":
@@ -270,15 +278,15 @@
   resolved "https://registry.yarnpkg.com/@tokenizer/token/-/token-0.3.0.tgz#fe98a93fe789247e998c75e74e9c7c63217aa276"
   integrity sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==
 
-"@types/any-base@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@types/any-base/-/any-base-1.1.3.tgz#7e9371cb584369241e6b19fbacafd05f557a19c4"
-  integrity sha512-B7RTBD7jVYxm754XDdw6UozY3ZyyBv4iF4QQSjCzeLV4avDy8JBwCuI5SN4mz27ENI6K1NtKZwQ7zcqgH2h2Mw==
-
 "@types/node@16.9.1":
   version "16.9.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.9.1.tgz#0611b37db4246c937feef529ddcc018cf8e35708"
   integrity sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==
+
+any-base@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/any-base/-/any-base-1.1.0.tgz#ae101a62bc08a597b4c9ab5b7089d456630549fe"
+  integrity sha512-uMgjozySS8adZZYePpaWs8cxB9/kdzmpX6SgJZ+wbz1K5eYk5QMYDVJaZKhxyIHUdnnJkfR7SVgStgH7LkGUyg==
 
 await-to-js@^3.0.0:
   version "3.0.0"
@@ -329,37 +337,38 @@ inherits@^2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
-jimp@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/jimp/-/jimp-1.0.4.tgz#ab00de0cf2f61b0928ed8bada9fbffca22e3833c"
-  integrity sha512-J1zLB9LCEMznSoh277vJuiIzTxlurJxrC1Wv9aRKtbLtRZEwxEU5iHmN300Hzc62BUCyGziVHx6g7kfTp84j0A==
+jimp@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/jimp/-/jimp-1.1.1.tgz#2ec78599d66f647536270ee0898d034b36ee3247"
+  integrity sha512-ULh65TPCPxj9le8me4BM8pYOx6+6rn7wKXqlYU0iE5geCX4osXIv2Scr44DiNVTZhk+BlNsSr36tY23gBYjHow==
   dependencies:
-    "@jimp/core" "1.0.4"
-    "@jimp/diff" "1.0.4"
-    "@jimp/js-bmp" "1.0.4"
-    "@jimp/js-gif" "1.0.4"
-    "@jimp/js-jpeg" "1.0.4"
-    "@jimp/js-png" "1.0.4"
-    "@jimp/js-tiff" "1.0.4"
-    "@jimp/plugin-blit" "1.0.4"
-    "@jimp/plugin-blur" "1.0.4"
-    "@jimp/plugin-circle" "1.0.4"
-    "@jimp/plugin-color" "1.0.4"
-    "@jimp/plugin-contain" "1.0.4"
-    "@jimp/plugin-cover" "1.0.4"
-    "@jimp/plugin-crop" "1.0.4"
-    "@jimp/plugin-displace" "1.0.4"
-    "@jimp/plugin-dither" "1.0.4"
-    "@jimp/plugin-fisheye" "1.0.4"
-    "@jimp/plugin-flip" "1.0.4"
-    "@jimp/plugin-hash" "1.0.4"
-    "@jimp/plugin-mask" "1.0.4"
-    "@jimp/plugin-print" "1.0.4"
-    "@jimp/plugin-resize" "1.0.4"
-    "@jimp/plugin-rotate" "1.0.4"
-    "@jimp/plugin-threshold" "1.0.4"
-    "@jimp/types" "1.0.4"
-    "@jimp/utils" "1.0.4"
+    "@jimp/core" "1.1.1"
+    "@jimp/diff" "1.1.1"
+    "@jimp/js-bmp" "1.1.1"
+    "@jimp/js-gif" "1.1.1"
+    "@jimp/js-jpeg" "1.1.1"
+    "@jimp/js-png" "1.1.1"
+    "@jimp/js-tiff" "1.1.1"
+    "@jimp/plugin-blit" "1.1.1"
+    "@jimp/plugin-blur" "1.1.1"
+    "@jimp/plugin-circle" "1.1.1"
+    "@jimp/plugin-color" "1.1.1"
+    "@jimp/plugin-contain" "1.1.1"
+    "@jimp/plugin-cover" "1.1.1"
+    "@jimp/plugin-crop" "1.1.1"
+    "@jimp/plugin-displace" "1.1.1"
+    "@jimp/plugin-dither" "1.1.1"
+    "@jimp/plugin-fisheye" "1.1.1"
+    "@jimp/plugin-flip" "1.1.1"
+    "@jimp/plugin-hash" "1.1.1"
+    "@jimp/plugin-mask" "1.1.1"
+    "@jimp/plugin-print" "1.1.1"
+    "@jimp/plugin-quantize" "1.1.1"
+    "@jimp/plugin-resize" "1.1.1"
+    "@jimp/plugin-rotate" "1.1.1"
+    "@jimp/plugin-threshold" "1.1.1"
+    "@jimp/types" "1.1.1"
+    "@jimp/utils" "1.1.1"
 
 jpeg-js@^0.4.4:
   version "0.4.4"
