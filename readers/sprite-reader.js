@@ -33,17 +33,19 @@ export const isRleEncoded = (datContents) => {
   return nbSprites !== 0;
 };
 
-export const readSpriteFiles = (datFilename, tabFilename) => {
+export const readSpriteDat = (datFilename) => {
   const datBuffer = readFileSync(join(DATA_FOLDER, datFilename), null);
+  return new Uint8Array(datBuffer.buffer, datBuffer.byteOffset, datBuffer.length);
+};
+
+export const readSpriteTab = (tabFilename) => {
   const tabBuffer = readFileSync(join(DATA_FOLDER, tabFilename), null);
-
-  const datContents = new Uint8Array(datBuffer.buffer, datBuffer.byteOffset, datBuffer.length);
   const tabContents = new Uint8Array(tabBuffer.buffer, tabBuffer.byteOffset, tabBuffer.length);
+  return parseSpriteTab(tabContents);
+};
 
-  if (isRleEncoded(datContents)) {
-    throw new Error(`RLE-encoded sprite data in ${datFilename} is not supported`);
-  }
-
-  const tabEntries = parseSpriteTab(tabContents);
+export const readSpriteFiles = (datFilename, tabFilename) => {
+  const datContents = readSpriteDat(datFilename);
+  const tabEntries = readSpriteTab(tabFilename);
   return { datContents, tabEntries };
 };
