@@ -14,11 +14,15 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
 - run `yarn install`
 - Install Wine (to run command line tools)
 - From `tools/bullfrog_utils_rnc.zip`, you'll need the file `dernc.exe` to uncompress `.DAT` files.
-- From your game installation (`\SYNDICAT\DATA` subfolder inside it), copy the relevant `.DAT` files to this repository's `data` subfolder:
+- From your game installation (`\SYNDICAT\DATA` subfolder inside it), copy the relevant files to this repository's `data` subfolder:
   - `HBLK01.DAT`
   - `HPAL01.DAT` to `HPAL05.DAT` (or the amount of palette files you wish to use for maps)
   - `MAP01.DAT` to `MAP94.DAT` (or the amount of maps you wish to export)
-  - `HSPR-0.DAT` and `HSPR-0.TAB` (and/or `HSPR-1.DAT` and `HSPR-1.TAB`) for sprites
+  - `HSPR-0.DAT` and `HSPR-0.TAB` (and/or `HSPR-1.DAT` and `HSPR-1.TAB`) for in-game sprites
+  - `HPOINTER.DAT` and `HPOINTER.TAB` for cursor sprites
+  - `MFNT-0.DAT` and `MFNT-0.TAB` for menu fonts
+  - `MSPR-0.DAT` and `MSPR-0.TAB` for menu sprites
+  - `MSELECT.PAL` for the menu palette
 
 ### Decompressing files
 
@@ -27,6 +31,8 @@ Usage is like:
 wine dernc.exe <filename1> <filename2> ...
 ```
 Note: overrides the original with the uncompressed version. Game will work without problems with the uncompressed version but just so that you're aware. That's why for safety this project uses its own folder and you must copy data files there.
+
+Files that need decompressing before use: `HSPR-0.DAT`, `HSPR-0.TAB`, `MSELECT.PAL` (and any other RNC-compressed files you copy over).
 
 ## Usage
 
@@ -59,7 +65,13 @@ This tool exports a `MAPxx.DAT` map file into a `png` file under the `maps` subf
 node exporters/sprite-exporter.js
 ```
 
-This tool extracts all individual sprites from any `HSPR-*.DAT`/`HSPR-*.TAB` file pairs found in the `data` folder into `png` files under `sprites/<sprite-set-name>/`. It uses the first available `HPAL*.DAT` palette. Note that `HSPR-0.DAT` and `HSPR-0.TAB` are RNC-compressed in the GOG install and must be decompressed with `dernc.exe` before use.
+This tool extracts all sprites from any `.DAT`/`.TAB` file pairs found in the `data` folder into `png` files under `sprites/<sprite-set-name>/`. Supported sprite sets:
+
+- `HSPR-*.DAT` / `HPOINTER.DAT`: in-game sprites, rendered with the first available `HPAL*.DAT` palette (16-color)
+- `MFNT-0.DAT`: menu fonts, rendered with `MSELECT.PAL` (256-color)
+- `MSPR-0.DAT`: menu sprites, rendered with `MSELECT.PAL` (256-color)
+
+`MSELECT.PAL` must be present and decompressed; if it is missing or still RNC-compressed, menu sprite sets are skipped with a warning.
 
 
 ## References
