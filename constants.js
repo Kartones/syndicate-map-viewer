@@ -17,6 +17,12 @@ export const BYTES_PER_SUBTILE = BYTES_PER_ROW * SUBTILE_HEIGHT;
 // For now, optimized palettes for in-game use case
 export const NUM_COLORS_INGAME = 16;
 
+export const SPRITE_BLOCK_SIZE = 8;
+export const SPRITE_BYTES_PER_BLOCK = 5;
+export const SPRITE_DAT_HEADER_SIZE = 2;
+export const SPRITE_TAB_ENTRY_SIZE = 6;
+
 export const DATA_FOLDER = "data";
 export const TILES_OUTPUT_FOLDER = "tiles";
 export const MAP_OUTPUT_FOLDER = "maps";
+export const SPRITES_OUTPUT_FOLDER = "sprites";

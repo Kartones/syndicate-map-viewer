@@ -2,5 +2,10 @@ node_modules/*
 temp/*
 data/*.exe
 data/*.DAT
+data/*.TAB
+data/*.INF
+data/*.TAB
 tiles/*.png
 maps/*.png
+sprites/**/*.png
+.DS_Store

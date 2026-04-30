@@ -18,6 +18,7 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
   - `HBLK01.DAT`
   - `HPAL01.DAT` to `HPAL05.DAT` (or the amount of palette files you wish to use for maps)
   - `MAP01.DAT` to `MAP94.DAT` (or the amount of maps you wish to export)
+  - `HSPR-0.DAT` and `HSPR-0.TAB` (and/or `HSPR-1.DAT` and `HSPR-1.TAB`) for sprites
 
 ### Decompressing files
 
@@ -51,6 +52,14 @@ This tool exports a `MAPxx.DAT` map file into a `png` file under the `maps` subf
 
 ![MAP03 with HPAL01](doc/map-only-tiles-01.jpg)
 ![MAP03 with HPAL02](doc/map-only-tiles-02.jpg)
+
+### sprite-exporter.js
+
+```bash
+node exporters/sprite-exporter.js
+```
+
+This tool extracts all individual sprites from any `HSPR-*.DAT`/`HSPR-*.TAB` file pairs found in the `data` folder into `png` files under `sprites/<sprite-set-name>/`. It uses the first available `HPAL*.DAT` palette. Note that `HSPR-0.DAT` and `HSPR-0.TAB` are RNC-compressed in the GOG install and must be decompressed with `dernc.exe` before use.
 
 
 ## References

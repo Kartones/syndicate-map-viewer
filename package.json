@@ -6,6 +6,9 @@
   "license": "Unlicense",
   "private": true,
   "type": "module",
+  "scripts": {
+    "test": "node --test **/*.test.js"
+  },
   "dependencies": {
     "jimp": "1.6.0"
   }
