@@ -7,6 +7,12 @@ export class Pixel {
     this.#transparency = transparency;
   }
 
+  static fromIndex(colorIndex, transparent) {
+    const pixel = new Pixel(0, 0, 0, 0, transparent ? 1 : 0);
+    pixel.#color = colorIndex;
+    return pixel;
+  }
+
   get color() {
     return this.#color;
   }

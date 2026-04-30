@@ -5,7 +5,11 @@ import { readFileSync } from "fs";
 
 import { DATA_FOLDER, NUM_COLORS_INGAME } from "../constants.js";
 
-export const readPalette = (filename) => {
+export const readPalette = (filename) => readPaletteN(filename, NUM_COLORS_INGAME);
+
+export const readFullPalette = (filename) => readPaletteN(filename, 256);
+
+const readPaletteN = (filename, numColors) => {
   const paletteContents = readPaletteFile(filename);
 
   assert(
@@ -13,9 +17,9 @@ export const readPalette = (filename) => {
     `Expected 256*3=768 color component bytes, got ${paletteContents.length}`
   );
 
-  const palette = new Array(NUM_COLORS_INGAME);
+  const palette = new Array(numColors);
 
-  for (let color = 0; color < NUM_COLORS_INGAME; color++) {
+  for (let color = 0; color < numColors; color++) {
     // we scale values from [0, 63] to [0, 255]
     const red = paletteContents[color * 3] * 4;
     const green = paletteContents[color * 3 + 1] * 4;
