@@ -65,6 +65,8 @@ This tool exports a `MAPxx.DAT` map file into a `png` file under the `maps` subf
 node exporters/sprite-exporter.js
 ```
 
+**WIP**
+
 This tool extracts all sprites from any `.DAT`/`.TAB` file pairs found in the `data` folder into `png` files under `sprites/<sprite-set-name>/`. Supported sprite sets:
 
 - `HSPR-*.DAT` / `HPOINTER.DAT`: in-game sprites, rendered with the first available `HPAL*.DAT` palette (16-color)
@@ -72,6 +74,8 @@ This tool extracts all sprites from any `.DAT`/`.TAB` file pairs found in the `d
 - `MSPR-0.DAT`: menu sprites, rendered with `MSELECT.PAL` (256-color)
 
 `MSELECT.PAL` must be present and decompressed; if it is missing or still RNC-compressed, menu sprite sets are skipped with a warning.
+
+![In-game and main menu sprites with the correct palette](doc/sprites-screenshot.png)
 
 
 ## References
