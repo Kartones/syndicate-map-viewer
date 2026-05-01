@@ -26,3 +26,5 @@ export const DATA_FOLDER = "data";
 export const TILES_OUTPUT_FOLDER = "tiles";
 export const MAP_OUTPUT_FOLDER = "maps";
 export const SPRITES_OUTPUT_FOLDER = "sprites";
+export const ANIMATIONS_OUTPUT_FOLDER = "animations";
+export const GIF_FRAME_DELAY_MS = 250;

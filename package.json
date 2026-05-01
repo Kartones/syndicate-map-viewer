@@ -10,6 +10,7 @@
     "test": "node --test **/*.test.js"
   },
   "dependencies": {
+    "gifenc": "^1.0.3",
     "jimp": "1.6.0"
   }
 }

@@ -7,7 +7,7 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
 ## Assumptions
 
 - This repository and the tools have been used only from a Linux system, with the [Good Old Games version](https://www.gog.com/game/syndicate) of Syndicate, which comes with all files in uppercase. I run  the game via [DOSBOX](https://www.dosbox.com/), but there's no real need of that to use the tools.
-- Readable over optimized code.
+- Readable over optimized code (YMMV, as in the end there are a lot of bit operations).
 
 ## Setup
 
@@ -23,16 +23,20 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
   - `MFNT-0.DAT` and `MFNT-0.TAB` for menu fonts
   - `MSPR-0.DAT` and `MSPR-0.TAB` for menu sprites
   - `MSELECT.PAL` for the menu palette
+  - `HSTA-0.ANI`, `HFRA-0.ANI`, `HELE-0.ANI` for sprite animation descriptors
 
 ### Decompressing files
 
-Usage is like:
-```
-wine dernc.exe <filename1> <filename2> ...
-```
-Note: overrides the original with the uncompressed version. Game will work without problems with the uncompressed version but just so that you're aware. That's why for safety this project uses its own folder and you must copy data files there.
+Many game files are RNC-compressed. This project includes a built-in decompressor:
 
-Files that need decompressing before use: `HSPR-0.DAT`, `HSPR-0.TAB`, `MSELECT.PAL` (and any other RNC-compressed files you copy over).
+```bash
+node tools/rnc-decompress.js data/<filename1> data/<filename2> ...
+```
+
+It checks whether each file is RNC-compressed and, if so, overwrites it with the decompressed version in place. Files that are not compressed are skipped. The game works fine with decompressed files.
+
+Non-exhaustive list of files that need decompressing before use: `HSPR-0.DAT`, `HSPR-0.TAB`, `MSELECT.PAL`, `HSTA-0.ANI`, `HFRA-0.ANI`, `HELE-0.ANI`.
+
 
 ## Usage
 
@@ -76,6 +80,22 @@ This tool extracts all sprites from any `.DAT`/`.TAB` file pairs found in the `d
 `MSELECT.PAL` must be present and decompressed; if it is missing or still RNC-compressed, menu sprite sets are skipped with a warning.
 
 ![In-game and main menu sprites with the correct palette](doc/sprites-screenshot.png)
+
+### animation-exporter.js
+
+```bash
+node exporters/animation-exporter.js
+```
+
+**WIP**
+
+This tool composes multi-part sprites (head, body, legs, etc.) into full entity animations and exports them under `animations/<anim-NNNN>/`:
+- One `frame-NNN.png` per frame
+- One `anim.gif` animated GIF (0.25s per frame, loops forever)
+
+It reads the three animation descriptor files (`HSTA-0.ANI`, `HFRA-0.ANI`, `HELE-0.ANI`) which may be RNC-compressed — the tool decompresses them transparently. Requires `HSPR-0.DAT` and `HSPR-0.TAB` to be present and already decompressed.
+
+![Example sprite animation 1](doc/sprite_anim_01.gif) ![Example sprite animation 2](doc/sprite_anim_02.gif) ![Example sprite animation 3](doc/sprite_anim_03.gif)
 
 
 ## References
