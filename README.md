@@ -12,8 +12,6 @@ Make a map viewer for **Syndicate**, one of the best games ever made.
 ## Setup
 
 - run `yarn install`
-- Install Wine (to run command line tools)
-- From `tools/bullfrog_utils_rnc.zip`, you'll need the file `dernc.exe` to uncompress `.DAT` files.
 - From your game installation (`\SYNDICAT\DATA` subfolder inside it), copy the relevant files to this repository's `data` subfolder:
   - `HBLK01.DAT`
   - `HPAL01.DAT` to `HPAL05.DAT` (or the amount of palette files you wish to use for maps)
@@ -97,6 +95,14 @@ It reads the three animation descriptor files (`HSTA-0.ANI`, `HFRA-0.ANI`, `HELE
 
 ![Example sprite animation 1](doc/sprite_anim_01.gif) ![Example sprite animation 2](doc/sprite_anim_02.gif) ![Example sprite animation 3](doc/sprite_anim_03.gif)
 
+
+## Testing
+
+```bash
+yarn test
+```
+
+Runs the unit tests (`node --test **/*.test.js`) covering the readers and entities.
 
 ## References
 
